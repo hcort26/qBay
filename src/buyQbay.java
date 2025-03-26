@@ -79,7 +79,15 @@ public class buyQbay {
 
             if(addtoCart.equalsIgnoreCase("Y")) {
                 System.out.println("Product added to cart.");
-                shopping = false; // end loop if they add to cart
+                System.out.println("Would you like to view more items or return to the menu? Enter 'more' or 'menu' ");
+                String itemsorMenu = scanner.nextLine();
+                
+                if(itemsorMenu.equalsIgnoreCase("more")){
+                    System.out.println("Returning to product list...");
+                } else if(itemsorMenu.equalsIgnoreCase("menu")) {
+                    shopping = false; // end loop if they add to cart
+                }
+                
             } else if(addtoCart.equalsIgnoreCase("N")) {
                 System.out.println("Returning to product list...");
             } else{
