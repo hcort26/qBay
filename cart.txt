@@ -1,2 +1,4 @@
 1 Chalk $2
 2 Can $5
+3 Fish $8
+4 Egg $3
