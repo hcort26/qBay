@@ -64,6 +64,7 @@ public class login {
             }
             else if (choice == 4){
                 System.out.println("Logging out...");
+                logout.message();
             }
             else {
                 System.out.println("Your choice was invalid, Please try again.  ");
