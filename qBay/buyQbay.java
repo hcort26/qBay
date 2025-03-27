@@ -1,9 +1,9 @@
+package qBay;
 import java.util.Scanner;
 
 public class buyQbay {
-    public static void main(String[] args) {
+    public static void start(Scanner scanner) {
         String[] products = new String[5];
-        Scanner scanner = new Scanner(System.in);
 
         products[0] = "HS101 Textbook";
         products[1] = "Wooden Desk";
@@ -23,7 +23,7 @@ public class buyQbay {
 
             }
 
-            System.out.println("Enter the number of the index for more product information.");
+            System.out.println("Enter the number of the index for more product information.\n");
             int productid = scanner.nextInt();
             scanner.nextLine(); // consume leftover newline
 
@@ -86,6 +86,7 @@ public class buyQbay {
                     System.out.println("Returning to product list...");
                 } else if(itemsorMenu.equalsIgnoreCase("menu")) {
                     shopping = false; // end loop if they add to cart
+                    return; // ends the method and brings you back to the main menu
                 }
                 
             } else if(addtoCart.equalsIgnoreCase("N")) {
@@ -94,8 +95,6 @@ public class buyQbay {
                 System.out.println("Incorrect letter, please re-enter your choice.");
             }
         }
-
-        scanner.close();
     }
 }
 
