@@ -75,6 +75,7 @@ public class login {
 
     public static void main(String[] args) {
         welcomeMessage(); 
+        Cart.readCartFile();
 
         if (emailPassword()){
             menu(); 
