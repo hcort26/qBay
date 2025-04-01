@@ -1,15 +1,18 @@
 package qBay;
 import java.util.Scanner;
+import java.io.FileWriter;
+import java.io.IOException;
+
 
 public class buyQbay {
     public static void start(Scanner scanner) {
         String[] products = new String[5];
 
-        products[0] = "HS101 Textbook";
-        products[1] = "Wooden Desk";
-        products[2] = "MA101 Textbook";
-        products[3] = "Leather Couch";
-        products[4] = "Quinnipiac Sweatshirt";
+        products[0] = "HS101 Textbook - 25#";
+        products[1] = "Wooden Desk- 75$";
+        products[2] = "MA101 Textbook - 30$";
+        products[3] = "Leather Couch - 250$";
+        products[4] = "Quinnipiac Sweatshirt - 40$";
 
         boolean shopping = true;
 
@@ -25,7 +28,7 @@ public class buyQbay {
 
             System.out.println("Enter the number of the index for more product information.\n");
             int productid = scanner.nextInt();
-            scanner.nextLine(); // consume leftover newline
+            scanner.nextLine(); 
 
             switch(productid) {
                 case 1: 
@@ -78,15 +81,22 @@ public class buyQbay {
             String addtoCart = scanner.nextLine();
 
             if(addtoCart.equalsIgnoreCase("Y")) {
-                System.out.println("Product added to cart.");
+
+                try (FileWriter writer = new FileWriter("qBay/cart.txt", true)) {
+                    writer.write(products[productid - 1] + "\n");
+                    System.out.println("Product added to cart.");
+                } catch (IOException e) {
+                    System.out.println("Error writing to cart: " + e.getMessage());
+                }
+            
                 System.out.println("Would you like to view more items or return to the menu? Enter 'more' or 'menu' ");
                 String itemsorMenu = scanner.nextLine();
                 
                 if(itemsorMenu.equalsIgnoreCase("more")){
                     System.out.println("Returning to product list...");
                 } else if(itemsorMenu.equalsIgnoreCase("menu")) {
-                    shopping = false; // end loop if they add to cart
-                    return; // ends the method and brings you back to the main menu
+                    shopping = false; 
+                    return;
                 }
                 
             } else if(addtoCart.equalsIgnoreCase("N")) {
