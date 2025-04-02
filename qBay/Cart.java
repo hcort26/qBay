@@ -32,9 +32,6 @@ public class Cart {
             
             // Read each line from the file
             while ((line = br.readLine()) != null) {
-                // Split the line into words (using regex \\s+ to handle multiple spaces)
-                String[] words = line.split("\\s+");
-
                 cartItems.add(line.trim());
 
                 // Extract price using regex to find numbers before $
@@ -48,14 +45,22 @@ public class Cart {
                 System.err.println("Could not parse price from item: " + line);
             }
                 
-                // Print each word
-                for (String word : words) {
-                    System.out.print(word);  // Prints each word on a new line                    
+            }
+            
+        } catch (FileNotFoundException e) {
+            System.err.println("File not found: " + e.getMessage());
+        } catch (IOException e) {
+            System.err.println("An error occurred while reading the file: " + e.getMessage());
+        }
+
+        System.out.println("Items in your cart:");
+                for (String item : cartItems) {
+                    System.out.println("- " + item);
                 }
                 
                 System.out.printf("Total: $%.2f\n", totalPrice);
                 Scanner scan = new Scanner(System.in);
-                System.out.println("Would you like to purchase this item in your cart? (Y/N)");
+                System.out.println("Would you like to purchase these items in your cart? (Y/N)");
                 String response = scan.nextLine();
 
                 if (response.equalsIgnoreCase("Y")) {
@@ -64,6 +69,7 @@ public class Cart {
                             writer.write(item + "\n");
                         }
                         System.out.println("Thank you for your purchase!");
+
                         // Clears the cart
                         new PrintWriter("qBay/cart.txt").close();
                     } catch (IOException e) {
@@ -72,13 +78,6 @@ public class Cart {
                 } else {
                     System.out.println("Returning to main menu...");
                 }
-            }
-            
-        } catch (FileNotFoundException e) {
-            System.err.println("File not found: " + e.getMessage());
-        } catch (IOException e) {
-            System.err.println("An error occurred while reading the file: " + e.getMessage());
-        }
     }
     
     public static void main(String[] args) {
