@@ -31,7 +31,7 @@ public class Sell {
 
         String fullItem = "Name: " + name + " | Price: " + price + "$ | Category: " + category;
         itemsForSale.add(fullItem);
-        
+
         System.out.println("\n " + name + " has been added for sale!");
     }
 
