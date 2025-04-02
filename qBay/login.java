@@ -4,7 +4,11 @@ import java.util.Scanner;
 
 public class login {
     private static final String email1 = "john.do@quinnipiac.edu"; 
+    private static final String email2 = "jane.do@quinnipiac.edu";
+    private static final String email3 = "noelkirby@quinnipiac.edu"; 
     private static final String password1 = "pass123"; 
+    private static final String password2 = "pass123"; 
+    private static final String password3 = "ilovemydog"; 
 
     public static void welcomeMessage(){
 
@@ -31,7 +35,9 @@ public class login {
         System.out.println("Password: "); 
         String password = scan.nextLine(); 
 
-        if(email.equals(email1) && password.equals(password1)){
+        if(email.equals(email1) && password.equals(password1) ||
+        (email.equals(email2) && password.equals(password2)) ||
+        (email.equals(email3) && password.equals(password3))) {
             System.out.println("Successful Login!!! ");
             return true; 
         }
