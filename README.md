@@ -1,19 +1,52 @@
-## Getting Started
+# qBay 
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+**qBay** is a command-line marketplace application built in Java, simulating a mini e-commerce platform. Users can browse items, add them to their cart, list their own items for sale, and complete purchases — all from the terminal.
 
-## Folder Structure
+---
 
-The workspace contains two folders by default, where:
+## Features
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+- **Buy Items**  
+  Browse available products and view detailed information before purchasing.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+- **Cart System**  
+  Add items to your cart, view cart contents, calculate total cost, and complete purchases.
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+- **Sell Items**  
+  Add your own listings with name, price, and category. View items you've listed.
 
-## Dependency Management
+- **Persistent Files**  
+  Purchases and cart contents are tracked using local text files (`cart.txt`, `purchased.txt`).
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
-# qBay
+
+## How to Run
+
+Make sure you're in the root of the project directory and run:
+
+javac qBay/*.java
+
+java qBay.login
+
+When prompted with the **login** option
+
+Enter "john.do@quinnipiac.edu" into the email prompt
+
+&
+
+Enter "pass123" into the password prompt
+
+## Example
+
+Main Menu:
+1. Buy
+2. Sell
+3. Cart
+4. Logout
+Please choose an option (1-4): 1
+
+You selected 'Buy'.
+Items available for sale:
+1. HS101 Textbook - 25$
+2. Wooden Desk - 75$
+...
+Would you like to add this product to cart? (Y/N)

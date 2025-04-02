@@ -1,3 +1,32 @@
+# Ignore class files
+*.class
+
+# Ignore build directories
+/bin/
+/lib/
+/out/
+/target/
+/build/
+
+# VS Code settings
+.vscode/
+
+# IntelliJ IDEA files (in case you're using it later)
+.idea/
+*.iml
+
+# Ignore compiled JARs
+*.jar
+
+# Ignore logs and temporary files
+*.log
+*.tmp
+*.swp
+.DS_Store
+
+# Ignore anything in src
+ /src/qBay
+=======
 .vscode
 bin
 *.class

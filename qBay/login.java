@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 
 public class login {
-    private static final String email1 = "john.do@quinnipaic.edu"; 
+    private static final String email1 = "john.do@quinnipiac.edu"; 
     private static final String password1 = "pass123"; 
 
     public static void welcomeMessage(){
@@ -55,16 +55,19 @@ public class login {
 
             if (choice == 1){
                 System.out.println("you selected 'Buy'. ");
-                buyQbay.start(scan2);
+                buyQbay.main();
             }
             else if (choice == 2){
                 System.out.println("you selected 'Sell'. ");
+                Sell.sellMenu(scan2);
             }
             else if (choice == 3){
                 System.out.println("you selected 'Cart'. ");
+                Cart.main(null);
             }
             else if (choice == 4){
                 System.out.println("Logging out...");
+                logout.message();
             }
             else {
                 System.out.println("Your choice was invalid, Please try again.  ");
