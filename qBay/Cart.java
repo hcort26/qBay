@@ -55,7 +55,7 @@ public class Cart {
                 
                 System.out.printf("Total: $%.2f\n", totalPrice);
                 Scanner scan = new Scanner(System.in);
-                System.out.println("Would you like to purchase the items in your cart? (Y/N)");
+                System.out.println("Would you like to purchase this item in your cart? (Y/N)");
                 String response = scan.nextLine();
 
                 if (response.equalsIgnoreCase("Y")) {
