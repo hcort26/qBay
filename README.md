@@ -23,7 +23,6 @@
 
 Make sure you're in the root of the project directory and run:
 
-```bash
 javac qBay/*.java
 java qBay.login
 
