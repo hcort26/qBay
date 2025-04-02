@@ -17,6 +17,7 @@
 
 - **Persistent Files**  
   Purchases and cart contents are tracked using local text files (`cart.txt`, `purchased.txt`).
+  Note: If you want to run the program fresh, please delete the text files, otherwise the program will pick up from where you left off.
 
 
 ## How to Run
