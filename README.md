@@ -27,6 +27,14 @@ Make sure you're in the root of the project directory and run:
 javac qBay/*.java
 java qBay.login
 
+When prompted with the **login** option
+
+Enter "john.do@quinnipiac.edu" into the email prompt
+
+&
+
+Enter "pass123" into the password prompt
+
 ## Example
 
 Main Menu:
