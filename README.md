@@ -23,32 +23,16 @@
 
 ## How to Run
 
-Make sure you're in the root of the project directory and run:
+### Make sure you're in the root of the project directory and run:
 
 javac qBay/*.java
 
 java qBay.login
 
-When prompted with the **login** option
+### When prompted with the **login** option, enter one of the following email addresses and passwords into the prompt:
 
-Enter "john.do@quinnipiac.edu" into the email prompt
+**Account 1:** EMAIL: john.do@quinnipiac.edu PASSWORD: pass123
 
-&
+**Account 2:** EMAIL: jane.do@quinnipiac.edu PASSWORD: pass123
 
-Enter "pass123" into the password prompt
-
-## Example
-
-Main Menu:
-1. Buy
-2. Sell
-3. Cart
-4. Logout
-Please choose an option (1-4): 1
-
-You selected 'Buy'.
-Items available for sale:
-1. HS101 Textbook - 25$
-2. Wooden Desk - 75$
-...
-Would you like to add this product to cart? (Y/N)
+**Account 3:** EMAIL: noelkirby@quinnipiac.edu PASSWORD: ilovemydog
